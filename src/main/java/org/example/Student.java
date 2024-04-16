@@ -1,51 +1,52 @@
 package org.example;
 
-
 import lombok.Builder;
 
 @Builder
 public class Student {
-    String fullName, universityId;
-    int currentCourseNumber;
-    float avgExamScore;
 
-    public Student() {
-    }
+  String fullName, universityId;
+  int currentCourseNumber;
+  float avgExamScore;
 
-    public Student(String fullName, String universityId, int currentCourseNumber, float avgExamScore) {
-        this.fullName = fullName;
-        this.universityId = universityId;
-        this.currentCourseNumber = currentCourseNumber;
-        this.avgExamScore = avgExamScore;
-    }
+  public Student() {
+  }
 
-    public String getFullName() {
-        return fullName;
-    }
+  public Student(String fullName, String universityId, int currentCourseNumber,
+      float avgExamScore) {
+    this.fullName = fullName;
+    this.universityId = universityId;
+    this.currentCourseNumber = currentCourseNumber;
+    this.avgExamScore = avgExamScore;
+  }
 
-    public String getUniversityId() {
-        return universityId;
-    }
+  public String getFullName() {
+    return fullName;
+  }
 
-    public int getCurrentCourseNumber() {
-        return currentCourseNumber;
-    }
+  public String getUniversityId() {
+    return universityId;
+  }
 
-    public float getAvgExamScore() {
-        return avgExamScore;
-    }
+  public int getCurrentCourseNumber() {
+    return currentCourseNumber;
+  }
 
-    @Override
-    public String toString() {
-        return "Student:" +
-                "{\nName: " + this.fullName +
-                "\nUniversity id: " + this.universityId +
-                "\nCurrent course number: " + this.currentCourseNumber +
-                "\nAverage exam score: " + avgExamScore +
-                "\n}";
-    }
+  public float getAvgExamScore() {
+    return avgExamScore;
+  }
 
-    //использовал вместо этого библиотеку lombok;
+  @Override
+  public String toString() {
+    return "Student:" +
+        "{\nName: " + this.fullName +
+        "\nUniversity id: " + this.universityId +
+        "\nCurrent course number: " + this.currentCourseNumber +
+        "\nAverage exam score: " + avgExamScore +
+        "\n}";
+  }
+
+  //использовал вместо этого библиотеку lombok;
 
 //    public static class studentBuilder {
 //        String fullName, universityId;

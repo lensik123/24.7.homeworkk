@@ -3,65 +3,66 @@ package org.example;
 //lombok библиотека, использовал готовый билдер из этой библиотеки.
 import lombok.Builder;
 
-
 @Builder
 public class University {
-    String id, fullName, shortName;
-    int yearOfFoundation;
-    StudyProfile mainProfile;
 
-    public University() {
+  String id, fullName, shortName;
+  int yearOfFoundation;
+  StudyProfile mainProfile;
+
+  public University() {
+  }
+
+  public University(String id, String fullName, String shortName, int yearOfFoundation,
+      StudyProfile mainProfile) {
+    this.id = id;
+    this.fullName = fullName;
+    this.shortName = shortName;
+    this.yearOfFoundation = yearOfFoundation;
+    this.mainProfile = mainProfile;
+  }
+
+  enum StudyProfile {
+    MEDICINE("Медицина"),
+    ENGINEERING("Инженерия"),
+    COMPUTER_SCIENCE("Информатика"),
+    LAW("Юриспруденция");
+
+    private final String profileName;
+
+    StudyProfile(String profileName) {
+      this.profileName = profileName;
     }
+  }
 
-    enum StudyProfile {
-        MEDICINE("Медицина"),
-        ENGINEERING("Инженерия"),
-        COMPUTER_SCIENCE("Информатика"),
-        LAW("Юриспруденция");
+  public String getId() {
+    return id;
+  }
 
-        private final String profileName;
+  public String getFullName() {
+    return fullName;
+  }
 
-        StudyProfile(String profileName) {
-            this.profileName = profileName;
-        }
-    }
+  public String getShortName() {
+    return shortName;
+  }
 
-    @Override
-    public String toString() {
-        return "University:" +
-                "{\nId: " + this.id +
-                "\nFull name: " + this.fullName +
-                "\nShort name: " + this.shortName +
-                "\nYear of foundation: " + this.yearOfFoundation +
-                "\nMain profile: " + this.mainProfile +
-                "\n}";
-    }
+  public int getYearOfFoundation() {
+    return yearOfFoundation;
+  }
 
-    public University(String id, String fullName, String shortName, int yearOfFoundation, StudyProfile mainProfile) {
-        this.id = id;
-        this.fullName = fullName;
-        this.shortName = shortName;
-        this.yearOfFoundation = yearOfFoundation;
-        this.mainProfile = mainProfile;
-    }
+  public StudyProfile getMainProfile() {
+    return mainProfile;
+  }
 
-    public String getId() {
-        return id;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public String getShortName() {
-        return shortName;
-    }
-
-    public int getYearOfFoundation() {
-        return yearOfFoundation;
-    }
-
-    public StudyProfile getMainProfile() {
-        return mainProfile;
-    }
+  @Override
+  public String toString() {
+    return "University:" +
+        "{\nId: " + this.id +
+        "\nFull name: " + this.fullName +
+        "\nShort name: " + this.shortName +
+        "\nYear of foundation: " + this.yearOfFoundation +
+        "\nMain profile: " + this.mainProfile +
+        "\n}";
+  }
 }
