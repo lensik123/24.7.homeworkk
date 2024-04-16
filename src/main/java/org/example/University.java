@@ -1,6 +1,7 @@
 package org.example;
 
 //lombok библиотека, использовал готовый билдер из этой библиотеки.
+
 import lombok.Builder;
 
 @Builder
@@ -19,19 +20,6 @@ public class University {
     this.shortName = shortName;
     this.yearOfFoundation = yearOfFoundation;
     this.mainProfile = mainProfile;
-  }
-
-  enum StudyProfile {
-    MEDICINE("Медицина"),
-    ENGINEERING("Инженерия"),
-    COMPUTER_SCIENCE("Информатика"),
-    LAW("Юриспруденция");
-
-    private final String profileName;
-
-    StudyProfile(String profileName) {
-      this.profileName = profileName;
-    }
   }
 
   public String getId() {
@@ -63,5 +51,18 @@ public class University {
         "\nYear of foundation: " + this.yearOfFoundation +
         "\nMain profile: " + this.mainProfile +
         "\n}";
+  }
+
+  enum StudyProfile {
+    MEDICINE("Медицина"),
+    ENGINEERING("Инженерия"),
+    COMPUTER_SCIENCE("Информатика"),
+    LAW("Юриспруденция");
+
+    private final String profileName;
+
+    StudyProfile(String profileName) {
+      this.profileName = profileName;
+    }
   }
 }
