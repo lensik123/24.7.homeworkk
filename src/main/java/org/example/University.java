@@ -45,7 +45,6 @@ public class University {
         this.mainProfile = mainProfile;
     }
 
-
     public String getId() {
         return id;
     }

@@ -45,8 +45,6 @@ public class Student {
                 "\n}";
     }
 
-
-
     //использовал вместо этого библиотеку lombok;
 
 //    public static class studentBuilder {
