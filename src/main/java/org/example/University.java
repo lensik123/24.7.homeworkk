@@ -14,7 +14,8 @@ public class University {
   public University() {
   }
 
-  public University(String id, String fullName, String shortName, int yearOfFoundation, StudyProfile mainProfile) {
+  public University(String id, String fullName, String shortName, int yearOfFoundation,
+      StudyProfile mainProfile) {
     this.id = id;
     this.fullName = fullName;
     this.shortName = shortName;
@@ -57,7 +58,10 @@ public class University {
     MEDICINE("Медицина"),
     ENGINEERING("Инженерия"),
     COMPUTER_SCIENCE("Информатика"),
-    LAW("Юриспруденция");
+    LAW("Юриспруденция"),
+    PHYSICS("Физика"),
+    MATHEMATICS("Математика"),
+    LINGUISTICS("Лингвистика");
 
     private final String profileName;
 
