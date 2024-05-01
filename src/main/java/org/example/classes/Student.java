@@ -1,4 +1,4 @@
-package org.example;
+package org.example.classes;
 
 import lombok.Builder;
 
@@ -38,12 +38,10 @@ public class Student {
 
   @Override
   public String toString() {
-    return "Student:" +
-        "{\nName: " + this.fullName +
-        "\nUniversity id: " + this.universityId +
-        "\nCurrent course number: " + this.currentCourseNumber +
-        "\nAverage exam score: " + avgExamScore +
-        "\n}";
+    return "Student: { Name: " + fullName +
+        ", University id: " + universityId +
+        ", Current course number: " + currentCourseNumber +
+        ", Average exam score: " + avgExamScore + " }";
   }
 
   //использовал вместо этого библиотеку lombok;

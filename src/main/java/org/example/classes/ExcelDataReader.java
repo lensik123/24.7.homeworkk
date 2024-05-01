@@ -1,4 +1,4 @@
-package org.example;
+package org.example.classes;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -9,6 +9,8 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.example.classes.Student;
+import org.example.classes.University;
 
 public class ExcelDataReader {
 
@@ -19,10 +21,13 @@ public class ExcelDataReader {
 
   public static List<Student> readStudents() {
     List<Student> studentList = new ArrayList<>();
+
     try (XSSFWorkbook wb = new XSSFWorkbook(new FileInputStream(path))) {
       XSSFSheet sheet = wb.getSheet("Студенты");
+
       Iterator<Row> iterator = sheet.iterator();
       iterator.next();
+
       while (iterator.hasNext()) {
         Row row = iterator.next();
         //id университета
@@ -37,20 +42,25 @@ public class ExcelDataReader {
         //Средний балл
         getCellValue = row.getCell(3);
         float avgExamScore = (float) getCellValue.getNumericCellValue();
+
         studentList.add(new Student(fullName, universityID, currentCourseNumber, avgExamScore));
       }
     } catch (IOException e) {
       e.printStackTrace();
     }
+
     return studentList;
   }
 
   public static List<University> readUniversities() {
     List<University> universities = new ArrayList<>();
+
     try (XSSFWorkbook wb = new XSSFWorkbook(new FileInputStream(path))) {
       XSSFSheet sheet = wb.getSheet("Университеты");
+
       Iterator<Row> iterator = sheet.iterator();
       iterator.next();
+
       while (iterator.hasNext()) {
         Row row = iterator.next();
         //id университета
@@ -68,6 +78,7 @@ public class ExcelDataReader {
         //Профиль обучения
         getCellValue = row.getCell(4);
         String mainProfile = getCellValue.getStringCellValue();
+
         universities.add(new University().builder()
             .id(universityID)
             .fullName(fullName)
@@ -79,6 +90,7 @@ public class ExcelDataReader {
     } catch (IOException e) {
       e.printStackTrace();
     }
+
     return universities;
   }
 }

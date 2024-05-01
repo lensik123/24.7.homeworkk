@@ -1,4 +1,4 @@
-package org.example;
+package org.example.classes;
 
 //lombok библиотека, использовал готовый билдер из этой библиотеки.
 
@@ -43,16 +43,19 @@ public class University {
     return mainProfile;
   }
 
+  public String getMainProfileName(){
+    return mainProfile.profileName;
+  }
+
   @Override
   public String toString() {
-    return "University:" +
-        "{\nId: " + this.id +
-        "\nFull name: " + this.fullName +
-        "\nShort name: " + this.shortName +
-        "\nYear of foundation: " + this.yearOfFoundation +
-        "\nMain profile: " + this.mainProfile +
-        "\n}";
+    return "University: { Id: " + id +
+        ", Full name: " + fullName +
+        ", Short name: " + shortName +
+        ", Year of foundation: " + yearOfFoundation +
+        ", Main profile: " + mainProfile + " }";
   }
+
 
   enum StudyProfile {
     MEDICINE("Медицина"),
