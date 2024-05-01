@@ -17,8 +17,7 @@ public class Main {
     List<Student> studentList = ExcelDataReader.readStudents();
     List<University> universityList = ExcelDataReader.readUniversities();
 
-    StudentComparator sc = EnumComparator.getStudentComparator(
-        StudentComparatorEnum.AVG_EXAM_SCORE);
+    StudentComparator sc = EnumComparator.getStudentComparator(StudentComparatorEnum.AVG_EXAM_SCORE);
     UniversityComparator uc = EnumComparator.getUniversityComparator(UniversityComparatorEnum.ID);
 
     studentList.stream()
