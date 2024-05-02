@@ -7,8 +7,8 @@ import org.example.Enum.UniversityComparatorEnum;
 import org.example.classes.ExcelDataReader;
 import org.example.classes.Student;
 import org.example.classes.University;
-import org.example.comparator.studentComparator.StudentComparator;
-import org.example.comparator.universityComparator.UniversityComparator;
+import org.example.comparator.studentcomparator.StudentComparator;
+import org.example.comparator.universitycomparator.UniversityComparator;
 
 public class Main {
 

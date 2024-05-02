@@ -1,15 +1,15 @@
 package org.example.Enum;
 
-import org.example.comparator.studentComparator.SortByAvgExamScore;
-import org.example.comparator.studentComparator.SortByCurrentCourseNumber;
-import org.example.comparator.studentComparator.SortByFullName;
-import org.example.comparator.studentComparator.SortByUniversityId;
-import org.example.comparator.studentComparator.StudentComparator;
-import org.example.comparator.universityComparator.SortById;
-import org.example.comparator.universityComparator.SortByMainProfile;
-import org.example.comparator.universityComparator.SortByShortName;
-import org.example.comparator.universityComparator.SortByYearOfFoundation;
-import org.example.comparator.universityComparator.UniversityComparator;
+import org.example.comparator.studentcomparator.SortByAvgExamScore;
+import org.example.comparator.studentcomparator.SortByCurrentCourseNumber;
+import org.example.comparator.studentcomparator.SortByFullName;
+import org.example.comparator.studentcomparator.SortByUniversityId;
+import org.example.comparator.studentcomparator.StudentComparator;
+import org.example.comparator.universitycomparator.SortById;
+import org.example.comparator.universitycomparator.SortByMainProfile;
+import org.example.comparator.universitycomparator.SortByShortName;
+import org.example.comparator.universitycomparator.SortByYearOfFoundation;
+import org.example.comparator.universitycomparator.UniversityComparator;
 
 public class EnumComparator {
 
@@ -40,7 +40,7 @@ public class EnumComparator {
       case ID:
         return new SortById();
       case FULL_NAME:
-        return new org.example.comparator.universityComparator.SortByFullName();
+        return new org.example.comparator.universitycomparator.SortByFullName();
       case SHORT_NAME:
         return new SortByShortName();
       case YEARS_OF_FOUNDATION:

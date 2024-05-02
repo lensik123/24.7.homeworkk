@@ -1,9 +1,7 @@
-package org.example.comparator.universityComparator;
+package org.example.comparator.universitycomparator;
 
 import org.apache.commons.lang3.StringUtils;
 import org.example.classes.University;
-
-import java.util.Comparator;
 
 public class SortByMainProfile implements UniversityComparator {
 

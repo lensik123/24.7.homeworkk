@@ -1,4 +1,4 @@
-package org.example.comparator.studentComparator;
+package org.example.comparator.studentcomparator;
 
 import org.example.classes.Student;
 

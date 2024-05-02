@@ -1,4 +1,4 @@
-package org.example.comparator.universityComparator;
+package org.example.comparator.universitycomparator;
 
 import org.example.classes.University;
 import java.util.Comparator;

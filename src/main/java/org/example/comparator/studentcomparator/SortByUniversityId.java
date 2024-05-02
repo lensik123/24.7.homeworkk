@@ -1,4 +1,4 @@
-package org.example.comparator.studentComparator;
+package org.example.comparator.studentcomparator;
 
 import org.apache.commons.lang3.StringUtils;
 import org.example.classes.Student;
