@@ -1,12 +1,21 @@
 package org.example.classes;
 
+import com.google.gson.annotations.SerializedName;
 import lombok.Builder;
 
 @Builder
 public class Student {
 
-  String fullName, universityId;
+  @SerializedName("Student Name")
+  String fullName;
+
+  @SerializedName("ID of University")
+  String universityId;
+
+  @SerializedName("Current course number")
   int currentCourseNumber;
+
+  @SerializedName("Average exam score")
   float avgExamScore;
 
   public Student() {
@@ -43,37 +52,4 @@ public class Student {
         ", Current course number: " + currentCourseNumber +
         ", Average exam score: " + avgExamScore + " }";
   }
-
-  //использовал вместо этого библиотеку lombok;
-
-//    public static class studentBuilder {
-//        String fullName, universityId;
-//        int currentCourseNumber;
-//        float avgExamScore;
-//
-//        public studentBuilder fullName(String fullName) {
-//            this.fullName = fullName;
-//            return this;
-//        }
-//
-//        public studentBuilder universityId(String universityId) {
-//            this.universityId = universityId;
-//            return this;
-//        }
-//
-//        public studentBuilder currentCourseNumber(int currentCourseNumber) {
-//            this.currentCourseNumber = currentCourseNumber;
-//            return this;
-//        }
-//
-//        public studentBuilder avgExamScore(float avgExamScore) {
-//            this.avgExamScore = avgExamScore;
-//            return this;
-//        }
-//
-//        public Student build(){
-//            return new Student(fullName, universityId, currentCourseNumber, avgExamScore);
-//        }
-//    }
-
 }

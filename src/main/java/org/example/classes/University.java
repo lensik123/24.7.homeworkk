@@ -2,13 +2,25 @@ package org.example.classes;
 
 //lombok библиотека, использовал готовый билдер из этой библиотеки.
 
+import com.google.gson.annotations.SerializedName;
 import lombok.Builder;
 
 @Builder
 public class University {
 
-  String id, fullName, shortName;
+  @SerializedName("ID")
+  String id;
+
+  @SerializedName("Name of University")
+  String fullName;
+
+  @SerializedName("Shortname")
+  String shortName;
+
+  @SerializedName("Year of foundation")
   int yearOfFoundation;
+
+  @SerializedName("Main profile of university")
   StudyProfile mainProfile;
 
   public University() {
