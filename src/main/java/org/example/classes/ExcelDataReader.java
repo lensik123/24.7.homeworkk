@@ -23,23 +23,27 @@ public class ExcelDataReader {
     try (XSSFWorkbook wb = new XSSFWorkbook(new FileInputStream(path))) {
       XSSFSheet sheet = wb.getSheet("Студенты");
 
-      Iterator<Row> iterator = sheet.iterator();
-      iterator.next();
+      Iterator<Row> iterator2 = sheet.iterator();
+      iterator2.next(); // Skip header row
 
-      while (iterator.hasNext()) {
-        Row row = iterator.next();
-        //id университета
-        Cell getCellValue = row.getCell(0);
-        String universityID = getCellValue.getStringCellValue();
-        //ФИО
-        getCellValue = row.getCell(1);
-        String fullName = getCellValue.getStringCellValue();
-        //Курс
-        getCellValue = row.getCell(2);
-        int currentCourseNumber = (int) getCellValue.getNumericCellValue();
-        //Средний балл
-        getCellValue = row.getCell(3);
-        float avgExamScore = (float) getCellValue.getNumericCellValue();
+      while (iterator2.hasNext()) {
+        Row row = iterator2.next();
+
+        // Get University ID
+        Cell cell = row.getCell(0);
+        String universityID = cell != null ? cell.getStringCellValue() : "";
+
+        // Get Full Name
+        cell = row.getCell(1);
+        String fullName = cell != null ? cell.getStringCellValue() : "";
+
+        // Get Current Course Number
+        cell = row.getCell(2);
+        int currentCourseNumber = cell != null ? (int) cell.getNumericCellValue() : 0;
+
+        // Get Average Exam Score
+        cell = row.getCell(3);
+        float avgExamScore = cell != null ? (float) cell.getNumericCellValue() : 0;
 
         studentList.add(new Student(fullName, universityID, currentCourseNumber, avgExamScore));
       }
@@ -50,8 +54,8 @@ public class ExcelDataReader {
     return studentList;
   }
 
-  public static List<University> readUniversities() {
-    List<University> universities = new ArrayList<>();
+  public static List<University> readuniversityCount() {
+    List<University> universityCount = new ArrayList<>();
 
     try (XSSFWorkbook wb = new XSSFWorkbook(new FileInputStream(path))) {
       XSSFSheet sheet = wb.getSheet("Университеты");
@@ -77,7 +81,7 @@ public class ExcelDataReader {
         getCellValue = row.getCell(4);
         String mainProfile = getCellValue.getStringCellValue();
 
-        universities.add(new University().builder()
+        universityCount.add(new University().builder()
             .id(universityID)
             .fullName(fullName)
             .shortName(shortName)
@@ -89,6 +93,6 @@ public class ExcelDataReader {
       e.printStackTrace();
     }
 
-    return universities;
+    return universityCount;
   }
 }

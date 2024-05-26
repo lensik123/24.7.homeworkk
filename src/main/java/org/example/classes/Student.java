@@ -1,9 +1,13 @@
 package org.example.classes;
 
 import com.google.gson.annotations.SerializedName;
-import lombok.Builder;
+import lombok.*;
 
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class Student {
 
   @SerializedName("Student Name")
@@ -17,33 +21,6 @@ public class Student {
 
   @SerializedName("Average exam score")
   float avgExamScore;
-
-  public Student() {
-  }
-
-  public Student(String fullName, String universityId, int currentCourseNumber,
-      float avgExamScore) {
-    this.fullName = fullName;
-    this.universityId = universityId;
-    this.currentCourseNumber = currentCourseNumber;
-    this.avgExamScore = avgExamScore;
-  }
-
-  public String getFullName() {
-    return fullName;
-  }
-
-  public String getUniversityId() {
-    return universityId;
-  }
-
-  public int getCurrentCourseNumber() {
-    return currentCourseNumber;
-  }
-
-  public float getAvgExamScore() {
-    return avgExamScore;
-  }
 
   @Override
   public String toString() {
