@@ -1,37 +1,59 @@
 package org.example;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
-
-import org.example.classes.*;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+import javax.xml.bind.JAXBException;
+import lombok.EqualsAndHashCode;
+import org.example.comparator.student.comparator.SortByAvgExamScore;
+import org.example.comparator.university.comparator.SortById;
+import org.example.io.ExcelDataReader;
+import org.example.io.JaxbWriter;
+import org.example.io.JsonWriter;
+import org.example.model.Statistics;
+import org.example.model.Student;
+import org.example.model.University;
+import org.example.model.XmlStructure;
 import org.example.util.StatisticsUtil;
 
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Main {
 
-    public static void main(String[] args) throws IOException {
+  private static final Logger logger = Logger.getLogger(Main.class.getName());
 
-        List<Student> studentList = ExcelDataReader.readStudents();
-        List<University> universityList = ExcelDataReader.readuniversityCount();
-        List<Statistics> statisticsList = StatisticsUtil.computeStats(studentList, universityList);
-        String path = "C:\\Users\\LenseL\\IdeaProjects\\24.7.homeworkk\\src\\main\\resources\\universityStatistics.xlsx";
-        XlsWriter.xslFileWrite(statisticsList, path);
-
-//
-//    StudentComparator sc = EnumComparator.getStudentComparator(StudentComparatorEnum.AVG_EXAM_SCORE);
-//    UniversityComparator uc = EnumComparator.getUniversityComparator(UniversityComparatorEnum.ID);
-//
-//    studentList.stream()
-//        .map(JsonUtil::serializeStudentToJson)
-//        .peek(System.out::println)
-//        .map(JsonUtil::deserializeStudentFromJson)
-//        .forEach(System.out::println);
-//
-//    System.out.println();
-//
-//    universityList.stream()
-//        .map(JsonUtil::serializeUniversityToJson)
-//        .peek(System.out::println)
-//        .map(JsonUtil::deserializeUniversityFromJson)
-//        .forEach(System.out::println);
+  public static void main(String[] args) throws IOException {
+    try (FileInputStream configFile = new FileInputStream(
+        "C:\\Users\\LenseL\\IdeaProjects\\24.7.homeworkk\\src\\main\\resources\\logging.properties")) {
+      LogManager.getLogManager().readConfiguration(configFile);
+    } catch (IOException e) {
+      logger.severe("failed to read config file");
     }
+    logger.info("Программа запущена");
+
+    List<Student> studentList = ExcelDataReader.readStudents();
+    List<University> universityList = ExcelDataReader.readuniversityCount();
+    List<Statistics> statisticsList = StatisticsUtil.computeStats(studentList, universityList);
+
+    studentList.sort(new SortByAvgExamScore());
+    universityList.sort(new SortById());
+
+    XmlStructure xmlStructure = XmlStructure.builder()
+        .studentList(studentList)
+        .universityList(universityList)
+        .statisticsList(statisticsList)
+        .build();
+
+    try {
+      JaxbWriter.jaxbWrite(xmlStructure);
+    } catch (JAXBException e) {
+      System.out.println("Fail parsing to xml");
+    }
+
+    JsonWriter.jsonWrite(xmlStructure);
+
+    logger.fine("Программа завершена");
+
+  }
 }

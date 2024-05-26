@@ -1,56 +1,64 @@
 package org.example.util;
 
-import org.apache.commons.lang3.StringUtils;
-import org.example.classes.Statistics;
-import org.example.classes.Student;
-import org.example.classes.University;
-import java.math.RoundingMode;
-
 import java.math.BigDecimal;
-import java.util.*;
+import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
+import org.example.model.Statistics;
+import org.example.model.Student;
+import org.example.model.University;
 
 public class StatisticsUtil {
 
-    public static List<Statistics> computeStats(List<Student> students, List<University> universities) {
-        List<Statistics> statisticsList = new ArrayList<>();
+  private static final Logger logger = Logger.getLogger(StatisticsUtil.class.getName());
 
-        Set<University.StudyProfile> studyProfiles = universities.stream()
-                .map(University::getMainProfile)
-                .collect(Collectors.toSet());
+  public static List<Statistics> computeStats(List<Student> students,
+      List<University> universities) {
+    List<Statistics> statisticsList = new ArrayList<>();
 
-        studyProfiles.forEach(profile -> {
-            List<University> profileUniversities = universities.stream()
-                    .filter(university -> university.getMainProfile().equals(profile))
-                    .toList();
+    logger.info("Сбор статистики по студентам и университетам");
+    Set<University.StudyProfile> studyProfiles = universities.stream()
+        .map(University::getMainProfile)
+        .collect(Collectors.toSet());
 
-            List<String> profileUniversityIds = profileUniversities.stream()
-                    .map(University::getId)
-                    .toList();
+    studyProfiles.forEach(profile -> {
+      List<University> profileUniversities = universities.stream()
+          .filter(university -> university.getMainProfile().equals(profile))
+          .toList();
 
-            String universityNames = profileUniversities.stream()
-                    .map(University::getFullName)
-                    .collect(Collectors.joining("; "));
+      List<String> profileUniversityIds = profileUniversities.stream()
+          .map(University::getId)
+          .toList();
 
-            List<Student> profileStudents = students.stream()
-                    .filter(student -> profileUniversityIds.contains(student.getUniversityId()))
-                    .toList();
+      String universityNames = profileUniversities.stream()
+          .map(University::getFullName)
+          .collect(Collectors.joining("; "));
 
-            double avgExamScore = profileStudents.stream()
-                    .mapToDouble(Student::getAvgExamScore)
-                    .average()
-                    .orElse(0);
+      List<Student> profileStudents = students.stream()
+          .filter(student -> profileUniversityIds.contains(student.getUniversityId()))
+          .toList();
 
-            Statistics statistics = Statistics.builder()
-                    .profileName(profile)
-                    .universityCount(profileUniversities.size())
-                    .universityNames(universityNames)
-                    .numberOfStudents(profileStudents.size())
-                    .avgExamScore((float) BigDecimal.valueOf(avgExamScore).setScale(2, RoundingMode.HALF_UP).doubleValue())
-                    .build();
+      double avgExamScore = profileStudents.stream()
+          .mapToDouble(Student::getAvgExamScore)
+          .average()
+          .orElse(0);
 
-            statisticsList.add(statistics);
-        });
-        return statisticsList;
-    }
+      Statistics statistics = Statistics.builder()
+          .profileName(profile)
+          .universityCount(profileUniversities.size())
+          .universityNames(universityNames)
+          .numberOfStudents(profileStudents.size())
+          .avgExamScore((float) BigDecimal.valueOf(avgExamScore).setScale(2, RoundingMode.HALF_UP)
+              .doubleValue())
+          .build();
+
+      statisticsList.add(statistics);
+    });
+
+    logger.info("Статистика собрана");
+    return statisticsList;
+  }
 }

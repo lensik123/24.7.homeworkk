@@ -2,49 +2,34 @@ package org.example.util;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import java.lang.reflect.Type;
 import java.util.List;
-import org.example.classes.Student;
-import org.example.classes.University;
 
 public class JsonUtil {
 
-  static  Gson gson = new Gson();
+  static Gson gson = new Gson();
 
   private JsonUtil() {
 
   }
 
-
-  public static String serializeStudentToJson(Student student) {
-    return gson.toJson(student);
+  public static <T> String serializeToJson(T object) {
+    return gson.toJson(object);
   }
 
-  public static String serializeUniversityToJson(University university) {
-    return gson.toJson(university);
+  public static <T> T deserializeFromJson(String json, Class<T> clazz) {
+    return gson.fromJson(json, clazz);
   }
 
-  public static String serializeStudentListToJson(List<Student> list) {
-    return gson.toJson(list);
+  public static <T> String serializeListToJson(List<T> list) {
+    Type listType = new TypeToken<List<T>>() {
+    }.getType();
+    return gson.toJson(list, listType);
   }
 
-  public static String serializeUniversityListToJson(List<University> list) {
-    return gson.toJson(list);
-  }
-
-  public static Student deserializeStudentFromJson(String json) {
-    return gson.fromJson(json, Student.class);
-  }
-
-  public static University deserializeUniversityFromJson(String json) {
-    return gson.fromJson(json, University.class);
-  }
-
-  public static List<Student> deserializeStudentListFromJson(String json) {
-    return gson.fromJson(json, new TypeToken<List<Student>>(){});
-  }
-
-  public static List<University> deserializeUniversityListFromJson(String json) {
-    return gson.fromJson(json, new TypeToken<List<University>>() {});
+  public static <T> List<T> deserializeListFromJson(String json, Class<T> clazz) {
+    Type listType = TypeToken.getParameterized(List.class, clazz).getType();
+    return gson.fromJson(json, listType);
   }
 
 }
