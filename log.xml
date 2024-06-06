@@ -2,9 +2,9 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2024-06-06T20:47:43.976728900Z</date>
-  <millis>1717706863976</millis>
-  <nanos>728900</nanos>
+  <date>2024-06-06T20:51:25.774551800Z</date>
+  <millis>1717707085774</millis>
+  <nanos>551800</nanos>
   <sequence>0</sequence>
   <logger>org.example.Main</logger>
   <level>INFO</level>
@@ -14,9 +14,9 @@
   <message>Программа запущена</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.005729800Z</date>
-  <millis>1717706864005</millis>
-  <nanos>729800</nanos>
+  <date>2024-06-06T20:51:25.805551800Z</date>
+  <millis>1717707085805</millis>
+  <nanos>551800</nanos>
   <sequence>1</sequence>
   <logger>org.example.io.ExcelDataReader</logger>
   <level>INFO</level>
@@ -26,9 +26,9 @@
   <message>Начало чтения данных о студентах из файла Excel</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.400606800Z</date>
-  <millis>1717706864400</millis>
-  <nanos>606800</nanos>
+  <date>2024-06-06T20:51:26.214144600Z</date>
+  <millis>1717707086214</millis>
+  <nanos>144600</nanos>
   <sequence>2</sequence>
   <logger>org.example.io.ExcelDataReader</logger>
   <level>FINE</level>
@@ -38,9 +38,9 @@
   <message>Информация о студентах собрана из excel файла</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.400606800Z</date>
-  <millis>1717706864400</millis>
-  <nanos>606800</nanos>
+  <date>2024-06-06T20:51:26.214144600Z</date>
+  <millis>1717707086214</millis>
+  <nanos>144600</nanos>
   <sequence>3</sequence>
   <logger>org.example.io.ExcelDataReader</logger>
   <level>INFO</level>
@@ -50,9 +50,9 @@
   <message>Начало чтения данных об университетах из файла Excel</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.425607100Z</date>
-  <millis>1717706864425</millis>
-  <nanos>607100</nanos>
+  <date>2024-06-06T20:51:26.239560700Z</date>
+  <millis>1717707086239</millis>
+  <nanos>560700</nanos>
   <sequence>4</sequence>
   <logger>org.example.io.ExcelDataReader</logger>
   <level>FINE</level>
@@ -62,9 +62,9 @@
   <message>Информация о университетах собрана из excel файла</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.426607Z</date>
-  <millis>1717706864426</millis>
-  <nanos>607000</nanos>
+  <date>2024-06-06T20:51:26.240589700Z</date>
+  <millis>1717707086240</millis>
+  <nanos>589700</nanos>
   <sequence>5</sequence>
   <logger>org.example.util.StatisticsUtil</logger>
   <level>INFO</level>
@@ -74,9 +74,9 @@
   <message>Сбор статистики по студентам и университетам</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.430606800Z</date>
-  <millis>1717706864430</millis>
-  <nanos>606800</nanos>
+  <date>2024-06-06T20:51:26.244127400Z</date>
+  <millis>1717707086244</millis>
+  <nanos>127400</nanos>
   <sequence>6</sequence>
   <logger>org.example.util.StatisticsUtil</logger>
   <level>INFO</level>
@@ -86,9 +86,9 @@
   <message>Статистика собрана</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.442607Z</date>
-  <millis>1717706864442</millis>
-  <nanos>607000</nanos>
+  <date>2024-06-06T20:51:26.270126900Z</date>
+  <millis>1717707086270</millis>
+  <nanos>126900</nanos>
   <sequence>7</sequence>
   <logger>javax.xml.bind</logger>
   <level>FINE</level>
@@ -98,9 +98,9 @@
   <message>Searching jaxb.properties</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.442607Z</date>
-  <millis>1717706864442</millis>
-  <nanos>607000</nanos>
+  <date>2024-06-06T20:51:26.271127Z</date>
+  <millis>1717707086271</millis>
+  <nanos>127000</nanos>
   <sequence>8</sequence>
   <logger>javax.xml.bind</logger>
   <level>FINE</level>
@@ -110,9 +110,9 @@
   <message>Checking system property javax.xml.bind.JAXBContextFactory</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.443607500Z</date>
-  <millis>1717706864443</millis>
-  <nanos>607500</nanos>
+  <date>2024-06-06T20:51:26.272127600Z</date>
+  <millis>1717707086272</millis>
+  <nanos>127600</nanos>
   <sequence>9</sequence>
   <logger>javax.xml.bind</logger>
   <level>FINE</level>
@@ -122,9 +122,9 @@
   <message>  not found</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.443607500Z</date>
-  <millis>1717706864443</millis>
-  <nanos>607500</nanos>
+  <date>2024-06-06T20:51:26.272127600Z</date>
+  <millis>1717707086272</millis>
+  <nanos>127600</nanos>
   <sequence>10</sequence>
   <logger>javax.xml.bind</logger>
   <level>FINE</level>
@@ -134,9 +134,9 @@
   <message>Checking system property javax.xml.bind.context.factory</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.443607500Z</date>
-  <millis>1717706864443</millis>
-  <nanos>607500</nanos>
+  <date>2024-06-06T20:51:26.272127600Z</date>
+  <millis>1717707086272</millis>
+  <nanos>127600</nanos>
   <sequence>11</sequence>
   <logger>javax.xml.bind</logger>
   <level>FINE</level>
@@ -146,9 +146,9 @@
   <message>  not found</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.444606800Z</date>
-  <millis>1717706864444</millis>
-  <nanos>606800</nanos>
+  <date>2024-06-06T20:51:26.273127400Z</date>
+  <millis>1717707086273</millis>
+  <nanos>127400</nanos>
   <sequence>12</sequence>
   <logger>javax.xml.bind</logger>
   <level>FINE</level>
@@ -158,9 +158,9 @@
   <message>Checking system property javax.xml.bind.JAXBContext</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.444606800Z</date>
-  <millis>1717706864444</millis>
-  <nanos>606800</nanos>
+  <date>2024-06-06T20:51:26.273127400Z</date>
+  <millis>1717707086273</millis>
+  <nanos>127400</nanos>
   <sequence>13</sequence>
   <logger>javax.xml.bind</logger>
   <level>FINE</level>
@@ -170,9 +170,9 @@
   <message>  not found</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.445608200Z</date>
-  <millis>1717706864445</millis>
-  <nanos>608200</nanos>
+  <date>2024-06-06T20:51:26.274127300Z</date>
+  <millis>1717707086274</millis>
+  <nanos>127300</nanos>
   <sequence>14</sequence>
   <logger>javax.xml.bind</logger>
   <level>FINE</level>
@@ -182,9 +182,9 @@
   <message>Searching META-INF/services</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.445608200Z</date>
-  <millis>1717706864445</millis>
-  <nanos>608200</nanos>
+  <date>2024-06-06T20:51:26.274127300Z</date>
+  <millis>1717707086274</millis>
+  <nanos>127300</nanos>
   <sequence>15</sequence>
   <logger>javax.xml.bind</logger>
   <level>FINE</level>
@@ -194,9 +194,9 @@
   <message>Configured factorty class:com.sun.xml.bind.v2.ContextFactory</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.446607Z</date>
-  <millis>1717706864446</millis>
-  <nanos>607000</nanos>
+  <date>2024-06-06T20:51:26.275127200Z</date>
+  <millis>1717707086275</millis>
+  <nanos>127200</nanos>
   <sequence>16</sequence>
   <logger>javax.xml.bind</logger>
   <level>FINE</level>
@@ -206,9 +206,9 @@
   <message>loaded com.sun.xml.bind.v2.ContextFactory from jar:file:/C:/Users/LenseL/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.4/jaxb-impl-2.3.4.jar!/com/sun/xml/bind/v2/ContextFactory.class</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.450607400Z</date>
-  <millis>1717706864450</millis>
-  <nanos>607400</nanos>
+  <date>2024-06-06T20:51:26.279127200Z</date>
+  <millis>1717707086279</millis>
+  <nanos>127200</nanos>
   <sequence>17</sequence>
   <logger>com.sun.xml.bind.v2.ContextFactory</logger>
   <level>FINE</level>
@@ -218,9 +218,9 @@
   <message>Property com.sun.xml.bind.XmlAccessorFactoryis not active.  Using JAXB's implementation</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.537529700Z</date>
-  <millis>1717706864537</millis>
-  <nanos>529700</nanos>
+  <date>2024-06-06T20:51:26.364237300Z</date>
+  <millis>1717707086364</millis>
+  <nanos>237300</nanos>
   <sequence>18</sequence>
   <logger>org.example.io.XlsWriter</logger>
   <level>INFO</level>
@@ -230,9 +230,9 @@
   <message>Сериализация структуры в json</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.560529700Z</date>
-  <millis>1717706864560</millis>
-  <nanos>529700</nanos>
+  <date>2024-06-06T20:51:26.385237500Z</date>
+  <millis>1717707086385</millis>
+  <nanos>237500</nanos>
   <sequence>19</sequence>
   <logger>org.example.io.XlsWriter</logger>
   <level>FINE</level>
@@ -242,9 +242,9 @@
   <message>Сериализация структуры в json прошла успешно</message>
 </record>
 <record>
-  <date>2024-06-06T20:47:44.560529700Z</date>
-  <millis>1717706864560</millis>
-  <nanos>529700</nanos>
+  <date>2024-06-06T20:51:26.386237500Z</date>
+  <millis>1717707086386</millis>
+  <nanos>237500</nanos>
   <sequence>20</sequence>
   <logger>org.example.Main</logger>
   <level>FINE</level>

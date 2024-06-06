@@ -6,20 +6,20 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.logging.Logger;
-import org.example.model.XmlStructure;
+import org.example.model.XmlAndJsonStructure;
 import org.example.util.JsonUtil;
 
 public class JsonWriter {
 
   private static final Logger logger = Logger.getLogger(XlsWriter.class.getName());
 
-  public static void jsonWrite(XmlStructure xmlStructure) {
+  public static void jsonWrite(XmlAndJsonStructure xmlAndJsonStructure) {
 
     logger.info("Сериализация структуры в json");
 
-    String studentsJson = JsonUtil.serializeListToJson(xmlStructure.getStudentList());
-    String universitiesJson = JsonUtil.serializeListToJson(xmlStructure.getUniversityList());
-    String statisticsJson = JsonUtil.serializeListToJson(xmlStructure.getStatisticsList());
+    String studentsJson = JsonUtil.serializeListToJson(xmlAndJsonStructure.getStudentList());
+    String universitiesJson = JsonUtil.serializeListToJson(xmlAndJsonStructure.getUniversityList());
+    String statisticsJson = JsonUtil.serializeListToJson(xmlAndJsonStructure.getStatisticsList());
 
     File directory = new File("S:\\Java\\jsonFiles");
     if (!directory.exists()) {

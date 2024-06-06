@@ -20,7 +20,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @XmlRootElement(name = "root")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class XmlStructure {
+public class XmlAndJsonStructure {
 
   @XmlElementWrapper(name = "studentsInfo")
   @XmlElement(name = "studentsEntry")

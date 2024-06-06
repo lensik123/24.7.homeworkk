@@ -15,7 +15,7 @@ import org.example.io.JsonWriter;
 import org.example.model.Statistics;
 import org.example.model.Student;
 import org.example.model.University;
-import org.example.model.XmlStructure;
+import org.example.model.XmlAndJsonStructure;
 import org.example.util.StatisticsUtil;
 
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
@@ -39,19 +39,19 @@ public class Main {
     studentList.sort(new SortByAvgExamScore());
     universityList.sort(new SortById());
 
-    XmlStructure xmlStructure = XmlStructure.builder()
+    XmlAndJsonStructure xmlAndJsonStructure = XmlAndJsonStructure.builder()
         .studentList(studentList)
         .universityList(universityList)
         .statisticsList(statisticsList)
         .build();
 
     try {
-      JaxbWriter.jaxbWrite(xmlStructure);
+      JaxbWriter.jaxbWrite(xmlAndJsonStructure);
     } catch (JAXBException e) {
       System.out.println("Fail parsing to xml");
     }
 
-    JsonWriter.jsonWrite(xmlStructure);
+    JsonWriter.jsonWrite(xmlAndJsonStructure);
 
     logger.fine("Программа завершена");
 
