@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2024-06-06T20:47:43.976728900Z</date>
+  <millis>1717706863976</millis>
+  <nanos>728900</nanos>
+  <sequence>0</sequence>
+  <logger>org.example.Main</logger>
+  <level>INFO</level>
+  <class>org.example.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Программа запущена</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.005729800Z</date>
+  <millis>1717706864005</millis>
+  <nanos>729800</nanos>
+  <sequence>1</sequence>
+  <logger>org.example.io.ExcelDataReader</logger>
+  <level>INFO</level>
+  <class>org.example.io.ExcelDataReader</class>
+  <method>readStudents</method>
+  <thread>1</thread>
+  <message>Начало чтения данных о студентах из файла Excel</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.400606800Z</date>
+  <millis>1717706864400</millis>
+  <nanos>606800</nanos>
+  <sequence>2</sequence>
+  <logger>org.example.io.ExcelDataReader</logger>
+  <level>FINE</level>
+  <class>org.example.io.ExcelDataReader</class>
+  <method>readStudents</method>
+  <thread>1</thread>
+  <message>Информация о студентах собрана из excel файла</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.400606800Z</date>
+  <millis>1717706864400</millis>
+  <nanos>606800</nanos>
+  <sequence>3</sequence>
+  <logger>org.example.io.ExcelDataReader</logger>
+  <level>INFO</level>
+  <class>org.example.io.ExcelDataReader</class>
+  <method>readuniversityCount</method>
+  <thread>1</thread>
+  <message>Начало чтения данных об университетах из файла Excel</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.425607100Z</date>
+  <millis>1717706864425</millis>
+  <nanos>607100</nanos>
+  <sequence>4</sequence>
+  <logger>org.example.io.ExcelDataReader</logger>
+  <level>FINE</level>
+  <class>org.example.io.ExcelDataReader</class>
+  <method>readuniversityCount</method>
+  <thread>1</thread>
+  <message>Информация о университетах собрана из excel файла</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.426607Z</date>
+  <millis>1717706864426</millis>
+  <nanos>607000</nanos>
+  <sequence>5</sequence>
+  <logger>org.example.util.StatisticsUtil</logger>
+  <level>INFO</level>
+  <class>org.example.util.StatisticsUtil</class>
+  <method>computeStats</method>
+  <thread>1</thread>
+  <message>Сбор статистики по студентам и университетам</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.430606800Z</date>
+  <millis>1717706864430</millis>
+  <nanos>606800</nanos>
+  <sequence>6</sequence>
+  <logger>org.example.util.StatisticsUtil</logger>
+  <level>INFO</level>
+  <class>org.example.util.StatisticsUtil</class>
+  <method>computeStats</method>
+  <thread>1</thread>
+  <message>Статистика собрана</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.442607Z</date>
+  <millis>1717706864442</millis>
+  <nanos>607000</nanos>
+  <sequence>7</sequence>
+  <logger>javax.xml.bind</logger>
+  <level>FINE</level>
+  <class>javax.xml.bind.ContextFinder</class>
+  <method>find</method>
+  <thread>1</thread>
+  <message>Searching jaxb.properties</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.442607Z</date>
+  <millis>1717706864442</millis>
+  <nanos>607000</nanos>
+  <sequence>8</sequence>
+  <logger>javax.xml.bind</logger>
+  <level>FINE</level>
+  <class>javax.xml.bind.ContextFinder</class>
+  <method>getSystemProperty</method>
+  <thread>1</thread>
+  <message>Checking system property javax.xml.bind.JAXBContextFactory</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.443607500Z</date>
+  <millis>1717706864443</millis>
+  <nanos>607500</nanos>
+  <sequence>9</sequence>
+  <logger>javax.xml.bind</logger>
+  <level>FINE</level>
+  <class>javax.xml.bind.ContextFinder</class>
+  <method>getSystemProperty</method>
+  <thread>1</thread>
+  <message>  not found</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.443607500Z</date>
+  <millis>1717706864443</millis>
+  <nanos>607500</nanos>
+  <sequence>10</sequence>
+  <logger>javax.xml.bind</logger>
+  <level>FINE</level>
+  <class>javax.xml.bind.ContextFinder</class>
+  <method>getSystemProperty</method>
+  <thread>1</thread>
+  <message>Checking system property javax.xml.bind.context.factory</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.443607500Z</date>
+  <millis>1717706864443</millis>
+  <nanos>607500</nanos>
+  <sequence>11</sequence>
+  <logger>javax.xml.bind</logger>
+  <level>FINE</level>
+  <class>javax.xml.bind.ContextFinder</class>
+  <method>getSystemProperty</method>
+  <thread>1</thread>
+  <message>  not found</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.444606800Z</date>
+  <millis>1717706864444</millis>
+  <nanos>606800</nanos>
+  <sequence>12</sequence>
+  <logger>javax.xml.bind</logger>
+  <level>FINE</level>
+  <class>javax.xml.bind.ContextFinder</class>
+  <method>getSystemProperty</method>
+  <thread>1</thread>
+  <message>Checking system property javax.xml.bind.JAXBContext</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.444606800Z</date>
+  <millis>1717706864444</millis>
+  <nanos>606800</nanos>
+  <sequence>13</sequence>
+  <logger>javax.xml.bind</logger>
+  <level>FINE</level>
+  <class>javax.xml.bind.ContextFinder</class>
+  <method>getSystemProperty</method>
+  <thread>1</thread>
+  <message>  not found</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.445608200Z</date>
+  <millis>1717706864445</millis>
+  <nanos>608200</nanos>
+  <sequence>14</sequence>
+  <logger>javax.xml.bind</logger>
+  <level>FINE</level>
+  <class>javax.xml.bind.ContextFinder</class>
+  <method>firstByServiceLoaderDeprecated</method>
+  <thread>1</thread>
+  <message>Searching META-INF/services</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.445608200Z</date>
+  <millis>1717706864445</millis>
+  <nanos>608200</nanos>
+  <sequence>15</sequence>
+  <logger>javax.xml.bind</logger>
+  <level>FINE</level>
+  <class>javax.xml.bind.ContextFinder</class>
+  <method>firstByServiceLoaderDeprecated</method>
+  <thread>1</thread>
+  <message>Configured factorty class:com.sun.xml.bind.v2.ContextFactory</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.446607Z</date>
+  <millis>1717706864446</millis>
+  <nanos>607000</nanos>
+  <sequence>16</sequence>
+  <logger>javax.xml.bind</logger>
+  <level>FINE</level>
+  <class>javax.xml.bind.ContextFinder</class>
+  <method>newInstance</method>
+  <thread>1</thread>
+  <message>loaded com.sun.xml.bind.v2.ContextFactory from jar:file:/C:/Users/LenseL/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.4/jaxb-impl-2.3.4.jar!/com/sun/xml/bind/v2/ContextFactory.class</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.450607400Z</date>
+  <millis>1717706864450</millis>
+  <nanos>607400</nanos>
+  <sequence>17</sequence>
+  <logger>com.sun.xml.bind.v2.ContextFactory</logger>
+  <level>FINE</level>
+  <class>com.sun.xml.bind.v2.ContextFactory</class>
+  <method>createContext</method>
+  <thread>1</thread>
+  <message>Property com.sun.xml.bind.XmlAccessorFactoryis not active.  Using JAXB's implementation</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.537529700Z</date>
+  <millis>1717706864537</millis>
+  <nanos>529700</nanos>
+  <sequence>18</sequence>
+  <logger>org.example.io.XlsWriter</logger>
+  <level>INFO</level>
+  <class>org.example.io.JsonWriter</class>
+  <method>jsonWrite</method>
+  <thread>1</thread>
+  <message>Сериализация структуры в json</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.560529700Z</date>
+  <millis>1717706864560</millis>
+  <nanos>529700</nanos>
+  <sequence>19</sequence>
+  <logger>org.example.io.XlsWriter</logger>
+  <level>FINE</level>
+  <class>org.example.io.JsonWriter</class>
+  <method>jsonWrite</method>
+  <thread>1</thread>
+  <message>Сериализация структуры в json прошла успешно</message>
+</record>
+<record>
+  <date>2024-06-06T20:47:44.560529700Z</date>
+  <millis>1717706864560</millis>
+  <nanos>529700</nanos>
+  <sequence>20</sequence>
+  <logger>org.example.Main</logger>
+  <level>FINE</level>
+  <class>org.example.Main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Программа завершена</message>
+</record>
+</log>
